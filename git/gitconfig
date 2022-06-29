@@ -1,0 +1,26 @@
+# gitconfig
+
+[user]
+    name = Brandon Hill
+    email = 107976177+everarch@users.noreply.github.com
+[core]
+    editor = vim
+    autocrlf = false
+    safecrlf = true
+[color]
+    ui = true
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    type = cat-file -t
+    dump = cat-file -p
+    dlc = diff --cached HEAD^
+    dl = "!git ll -1"
+    aliases = config --get-regexp alias
+[credential]
+	helper = cache --timeout=30
